@@ -1,0 +1,36 @@
+node_modules/
+release/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+data/
+*.db
+*.db.tmp
+backups/
+attachments/
+.smoke-data/
+.smoke-export/
+smoke*.png
+Coda-Workstation
+scripts/migrate-to-d.js
+scripts/check-d.js
+scripts/capture_coda_screens.js
+Cache/
+Code Cache/
+DawnGraphiteCache/
+DawnWebGPUCache/
+GPUCache/
+Dictionaries/
+Local Storage/
+Session Storage/
+Shared Dictionary/
+Network/
+blob_storage/
+SharedStorage/
+Local State
+Preferences
+DIPS
+docs/superpowers/
+scripts/check-pollution.js
+scripts/check-shots.js

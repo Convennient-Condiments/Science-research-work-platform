@@ -1,0 +1,37 @@
+{
+  "name": "phd-master-workspace",
+  "version": "1.0.0",
+  "description": "PhD Master Workspace 博士全周期科研一体化桌面工作台",
+  "main": "src/main/main.js",
+  "author": "PhD Master Workspace",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "test:smoke": "electron . --smoke",
+    "test:export": "electron scripts/smoke-export.js",
+    "build:win": "electron-builder --win nsis --x64",
+    "build:mac": "electron-builder --mac dmg --x64",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "docx": "^9.7.1",
+    "sql.js": "^1.14.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron": "^43.3.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.phdmaster.workspace",
+    "productName": "PhD Master Workspace",
+    "directories": { "output": "release" },
+    "files": ["src/**/*", "package.json"],
+    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true },
+    "mac": { "target": [{ "target": "dmg", "arch": ["x64"] }], "category": "public.app-category.productivity" },
+    "dmg": { "sign": false }
+  }
+}
